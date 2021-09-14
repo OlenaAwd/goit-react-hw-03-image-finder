@@ -4,25 +4,21 @@ import css from "./ImgGalleryItem.module.css";
 
 export class ImgGalleryItem extends Component {
   render() {
-    const { webformatURL, onSelectImg, largeImageURL } = this.props;
+    const { img, onSelectImg, largeImage } = this.props;
 
     return (
       <li
-        className={css.imgGalleryItem}
-        onClick={() => onSelectImg(largeImageURL)}
+        className={css.ImgGalleryItem}
+        onClick={() => onSelectImg(largeImage)}
       >
-        <img
-          src={webformatURL}
-          alt=""
-          className={css["imgGalleryItem-image"]}
-        />
+        <img src={img} alt="" className={css["ImgGalleryItemImage"]} />
       </li>
     );
   }
 }
 
 ImgGalleryItem.propTypes = {
-  largeImageURL: PropTypes.string,
-  webformatURL: PropTypes.string,
+  largeImage: PropTypes.string,
+  img: PropTypes.string,
   onSelectImg: PropTypes.func,
 };

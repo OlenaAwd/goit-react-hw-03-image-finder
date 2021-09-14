@@ -8,17 +8,15 @@ export class ImgGallery extends Component {
     const { images, onSelectedImg } = this.props;
 
     return (
-      <ul className={css.imgGallery}>
-        {images.map((img) => {
-          return (
-            <ImgGalleryItem
-              key={img.id}
-              largeImageURL={img.largeImageURL}
-              webformatURL={img.webformatURL}
-              onSelectImg={onSelectedImg}
-            />
-          );
-        })}
+      <ul className={css.ImgGallery}>
+        {images.map((img) => (
+          <ImgGalleryItem
+            key={img.id}
+            img={img.webformatURL}
+            largeImage={img.largeImageURL}
+            onSelectImg={onSelectedImg}
+          />
+        ))}
       </ul>
     );
   }

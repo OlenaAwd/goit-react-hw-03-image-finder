@@ -7,11 +7,9 @@ export class Button extends Component {
     const { onClick } = this.props;
 
     return (
-      <div className={css.wrap}>
-        <button type="button" className={css.button} onClick={onClick}>
-          Load more
-        </button>
-      </div>
+      <button type="button" className={css.Button} onClick={onClick}>
+        Load more
+      </button>
     );
   }
 }

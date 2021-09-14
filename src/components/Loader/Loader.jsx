@@ -11,7 +11,7 @@ export class Spinner extends Component {
           color="#00BFFF"
           height={80}
           width={80}
-          timeout={3000} //3 secs
+          timeout={3000}
         />
       </div>
     );
